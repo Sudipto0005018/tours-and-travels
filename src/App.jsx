@@ -30,6 +30,7 @@ function App() {
           <Route path="/tours/:id" element={<TourDetails />} />
           <Route path="/cart" element={<WithAuth><Cart /></WithAuth>} />
           <Route path="/checkout" element={<WithAuth><Checkout /></WithAuth>} />
+          <Route path="/checkout/:id" element={<WithAuth><Checkout /></WithAuth>} />
           <Route path="/" element={<Home />} />
         </Route>
       </Routes>

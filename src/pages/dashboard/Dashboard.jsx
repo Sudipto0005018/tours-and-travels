@@ -60,7 +60,7 @@ const Dashboard = () => {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center', 
-    marginBottom: '20px',
+    marginBottom: '0.5px',
     marginTop: '10px'
   };
   

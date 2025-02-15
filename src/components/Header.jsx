@@ -1,7 +1,7 @@
 
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
-import logo from '../assets/wanderlust3.png'; 
+import logo from '../assets/wanderlust2.png'; 
 
 const Header = () => {
   const location = useLocation();

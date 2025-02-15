@@ -1,20 +1,31 @@
 import { Container, Nav, Navbar, Button, Badge, Dropdown } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import logo from '../assets/wanderlust3.png'; 
+import logo from '../assets/wanderlust2.png'; 
 
 const AuthHeader = ({ logout }) => {
   const user = useSelector(state => state.auth.user);
   const cartItems = useSelector(state => state.cart.items); 
   const location = useLocation();
+  const navigate = useNavigate();
 
   const isActive = (path) => {
     return location.pathname === path ? 'active' : '';
   };
 
   const itemCount = cartItems.length; 
+
+
+
+  const handleOrdersClick = () => {
+    if (cartItems.length > 0) {
+      navigate(`/checkout/${cartItems[0].id}`);
+    } else {
+      navigate('/tours');
+    }
+  };
 
   return (
     <Navbar collapseOnSelect expand="lg" className="navbar navbar-dark fixed-top bg-dark">
@@ -54,7 +65,7 @@ const AuthHeader = ({ logout }) => {
 
               <Dropdown.Menu>
                 <Dropdown.Item as={Link} to="/dashboard">Dashboard</Dropdown.Item>
-                <Dropdown.Item as={Link} to="/checkout">Orders</Dropdown.Item>
+                <Dropdown.Item onClick={handleOrdersClick}>Orders</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
             <Button variant='outline-light' onClick={logout} style={{ marginLeft: '10px' }}>Logout</Button>

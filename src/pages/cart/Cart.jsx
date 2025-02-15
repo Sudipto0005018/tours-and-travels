@@ -3,14 +3,14 @@ import { Card, Button, Row, Col, Container } from 'react-bootstrap';
 import { increaseQuantity, decreaseQuantity, removeFromCart, clearCart } from '../../reduxStore/cartSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import { GoChevronLeft } from "react-icons/go";
-import emptyCartImage from '../../assets/empty-cart.png'; 
+import emptyCartImage from '../../assets/empty-cart.png';
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleRemoveFromCart = (id) => {
     dispatch(removeFromCart(id));
@@ -33,6 +33,10 @@ const Cart = () => {
     dispatch(clearCart());
   };
 
+  const handleCheckout = (id) => {
+    navigate(`/checkout/${id}`);
+  };
+
   const calculateTotal = () => {
     return cartItems.reduce((total, item) => total + item.quantity * parseFloat(item.price.slice(1)), 0).toFixed(2);
   };
@@ -42,14 +46,14 @@ const Cart = () => {
       {cartItems.length === 0 ? (
         <div className="empty-cart-message">
           <h1 style={{ fontFamily: 'serif' }}>Your Cart :</h1>
-          <img src={emptyCartImage} alt="Empty Cart" style={{ maxWidth: '400px', margin: '20px 0' }} /> {/* Add your image here */}
-          <p style={{ fontSize: '22px' }}>Your cart is <strong style={{color: 'red'}}>Empty!</strong></p>
+          <img src={emptyCartImage} alt="Empty Cart" style={{ maxWidth: '400px', margin: '20px 0' }} />
+          <p style={{ fontSize: '22px' }}>Your cart is <strong style={{ color: 'red' }}>Empty!</strong></p>
           <button className="back-to-tours-button" onClick={() => navigate("/tours")}><GoChevronLeft />Back to Tours</button>
         </div>
       ) : (
         <Row>
           <Col xs={12} lg={7}>
-            <h1 style={{ fontFamily: 'serif', textAlign: 'center'}}>Your Cart :</h1>
+            <h1 style={{ fontFamily: 'serif', textAlign: 'center' }}>Your Cart :</h1>
             {cartItems.map((item) => (
               <Card key={item.id} className="cart-item mb-3 p-3 w-100 d-flex flex-wrap">
                 <Card.Body>
@@ -85,7 +89,12 @@ const Cart = () => {
                         <Card.Text>${(item.quantity * parseFloat(item.price.slice(1))).toFixed(2)}</Card.Text>
                       </div>
                       <Button variant="" onClick={() => handleRemoveFromCart(item.id)} className="p-0">
-                        <FontAwesomeIcon icon={faTrash}/>
+                        <FontAwesomeIcon icon={faTrash} />
+                      </Button>
+                      <br />
+                      <br />
+                      <Button className="buy-now" onClick={() => handleCheckout(item.id)}>
+                        Buy
                       </Button>
                     </Col>
                   </Row>
@@ -93,16 +102,17 @@ const Cart = () => {
               </Card>
             ))}
           </Col>
-          <Col xs={12} lg={1} className="vertical-line">
-          </Col>
+          <Col xs={12} lg={1} className="vertical-line"></Col>
           <Col xs={12} lg={4}>
             <Card className="cart-summary text-center mt-4 mb-3 p-3">
               <h4 style={{ fontFamily: 'serif' }}>Cart Summary</h4>
               <p>Total Items: {cartItems.length}</p>
               <p>Total Amount: ${calculateTotal()}</p>
               <div className="d-flex justify-content-center">
-                <Button className="checkout btn-sm mx-2" onClick={() => navigate("/checkout")}>
-                  Checkout Now
+                <Button className="checkout btn-sm mx-2" onClick={() => {
+                  navigate("/tours")
+                }}>
+                  Continue
                 </Button>
                 <Button className="empty-cart btn-sm mx-2" onClick={handleClearCart}>
                   Empty Cart <FontAwesomeIcon icon={faTrash} />

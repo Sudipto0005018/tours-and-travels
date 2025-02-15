@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -24,7 +23,7 @@ body {
 
 .tour-list-heading {
   font-size: 2.5rem;
-  font-family:cursive;
+  font-family: cursive;
   color: rgb(16, 189, 137);
   text-transform: uppercase;
   margin-bottom: 0.5rem;
@@ -47,7 +46,7 @@ body {
 .card {
   width: 370px;
   margin: 1rem;
-  border:3px solid black !important;
+  border: 3px solid black !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
@@ -86,56 +85,58 @@ body {
   font-size: 0.8rem;
 }
 
-.login-button, .register-button{
+.login-button,
+.register-button {
   background-color: rgb(7, 160, 7) !important;
-  width:400px;
+  width: 400px;
   border-radius: 25px !important;
 }
 
-.login-button:hover, .register-button:hover{
+.login-button:hover,
+.register-button:hover {
   background-color: rgb(25, 190, 94) !important;
-  width:400px;
+  width: 400px;
   border-radius: 25px !important;
 }
 
-.email{
+.email {
   font-size: small;
 }
 
 .carousel-image {
   width: 100%;
-  height: 450px !important; 
-  object-fit: fill; 
+  height: 450px !important;
+  object-fit: fill;
   /* object-fit: contain;
   object-fit: cover; */
 }
 
-.tour-overview-heading{
+.tour-overview-heading {
   margin-top: 30px !important;
   background-color: rgb(255, 221, 180) !important;
-  color:#333;
+  color: #333;
   text-align: center;
 }
 
-.tour-plans{
+.tour-plans {
   margin-top: 30px;
 }
 
-.tour-name-heading{
+.tour-name-heading {
   margin-top: 30px !important;
   background-color: rgb(255, 221, 180) !important;
-  color:#333;
+  color: #333;
   text-align: center;
 }
 
-.tour-name{
-  color:rgb(175, 11, 11) !important;
+.tour-name {
+  color: rgb(175, 11, 11) !important;
   margin-top: 20px !important;
   font-size: larger !important;
 }
 
-.tour-description{
-  color:rgb(250, 114, 121) !important;
+.tour-description {
+  color: rgb(250, 114, 121) !important;
   margin-top: 10px;
   font-size: medium !important;
 }
@@ -157,17 +158,17 @@ body {
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
-  width: 150px; 
+  width: 150px;
   text-align: center;
   background-color: #464444;
-  color:white;
+  color: white;
 }
 
 .view-details-button:hover {
   background-color: #141414;
 }
 
-.details-top{
+.details-top {
   margin-bottom: 30px !important;
 }
 
@@ -238,33 +239,33 @@ body {
   color: #6c757d;
 }
 
-.layout-footer .social-icons a.google:hover{
+.layout-footer .social-icons a.google:hover {
   background-color: rgba(252, 152, 152, 0.932);
 }
 
-.layout-footer .social-icons a.twitter:hover, 
- .layout-footer .social-icons a.linkedin:hover{
+.layout-footer .social-icons a.twitter:hover,
+.layout-footer .social-icons a.linkedin:hover {
   background-color: rgba(150, 200, 247, 0.932);
- }
+}
 
- .layout-footer .social-icons a.facebook:hover{
+.layout-footer .social-icons a.facebook:hover {
   background-color: rgba(107, 168, 196, 0.932);
- }
+}
 
- .layout-footer .social-icons a.instagram:hover{
+.layout-footer .social-icons a.instagram:hover {
   background-color: rgb(248, 127, 147);
- }
+}
 
- .layout-footer .social-icons a.whatsapp:hover{
+.layout-footer .social-icons a.whatsapp:hover {
   background-color: #a0f0e9;
- }
+}
 
- .layout-footer .social-icons a.github:hover{
+.layout-footer .social-icons a.github:hover {
   background-color: #5c5a5a;
- }
+}
 
 
- .cart-badge {
+.cart-badge {
   position: absolute;
   top: -10px;
   right: -10px;
@@ -277,24 +278,24 @@ body {
   font-weight: bold;
   background-color: #dc3545;
   color: white;
- }
+}
 
- .back-to-tours-button{
+.back-to-tours-button {
   margin-top: 30px;
   background-color: rgb(83, 130, 218) !important;
   color: rgb(233, 240, 248) !important;
- }
+}
 
- .back-to-tours-button:hover{
+.back-to-tours-button:hover {
   background-color: rgb(54, 104, 180) !important;
- }
+}
 
 
 
 .cart-container {
   padding: 20px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.8); 
+  background-color: rgba(255, 255, 255, 0.8);
   background-image: url('');
   background-size: cover;
   background-position: center;
@@ -302,7 +303,7 @@ body {
 }
 
 .cart-container.has-items {
-  width: 100vw; 
+  width: 100vw;
 }
 
 .empty-cart-message {
@@ -320,11 +321,11 @@ body {
 }
 
 .cart-item {
-  background-color: rgba(255, 255, 255, 0.8); 
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .vertical-line {
-  border-left: 2px solid rgba(0, 0, 0, 0.1); 
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
   height: 100%;
 }
 
@@ -332,12 +333,12 @@ body {
   background-color: rgba(245, 245, 245, 0.9);
   border: 1px solid rgba(200, 200, 200, 0.5);
   border-radius: 10px;
-  margin-left: -2px; 
+  margin-left: -2px;
 }
 
 @media (max-width: 999px) and (min-width: 900px) {
   .cart-summary {
-    width: 100%; 
+    width: 100%;
   }
 }
 
@@ -371,7 +372,7 @@ body {
 
   .checkout,
   .empty-cart {
-    width: auto; 
+    width: auto;
     height: auto;
     margin-top: 10px;
   }
@@ -411,26 +412,25 @@ body {
 
 .checkout,
 .empty-cart {
-  width: 120px !important; 
+  width: 120px !important;
   height: 50px;
-} 
+}
 
-.checkout-container{
-  /* background-color: #464444; */
+.checkout-container {
   margin-top: -48px;
   margin-bottom: -40px;
 }
 
 .about-image {
   margin-top: 20px;
-  max-width: 20%; 
-  height: auto; 
-  border-radius: 8px; 
+  max-width: 20%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .about-page {
   padding: 50px;
-  background-color: #faf1de;
+  background-color: #fdebc7;
 }
 
 .about-content {
@@ -471,7 +471,7 @@ body {
   font-size: 2.5rem;
   color: rgba(255, 232, 170, 0.979);
   margin-bottom: 30px;
-  font-family:'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .feature-row {
@@ -546,3 +546,57 @@ body {
     padding: 10px;
   }
 }
+
+.buy-now {
+  margin-left: 20px;
+  color: rgb(247, 205, 19) !important;
+  background-color: rgb(255, 0, 0) !important;
+  font-weight: bolder !important;
+  border: 2px solid rgb(24, 24, 24) !important;
+  font-family: cursive !important;
+}
+
+.buy-now:hover {
+  font-size: 18px;
+  font-weight: bolder !important;
+}
+
+
+
+
+
+
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.explore-button1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(71, 185, 176);
+  color: #cef3ff;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.explore-button1:hover {
+  background-color: rgb(6, 121, 147);
+  color:white;
+}
+
+
+
