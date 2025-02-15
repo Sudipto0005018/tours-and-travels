@@ -45,7 +45,7 @@ const Cart = () => {
     <Container fluid className={cartItems.length > 0 ? 'cart-container has-items' : 'cart-container'}>
       {cartItems.length === 0 ? (
         <div className="empty-cart-message">
-          <h1 style={{ fontFamily: 'serif' }}>Your Cart :</h1>
+          <h1 style={{ fontFamily: 'serif', marginBottom: "10px"}}>Your Cart :</h1>
           <img src={emptyCartImage} alt="Empty Cart" style={{ maxWidth: '400px', margin: '20px 0' }} />
           <p style={{ fontSize: '22px' }}>Your cart is <strong style={{ color: 'red' }}>Empty!</strong></p>
           <button className="back-to-tours-button" onClick={() => navigate("/tours")}><GoChevronLeft />Back to Tours</button>
