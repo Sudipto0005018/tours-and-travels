@@ -126,7 +126,6 @@
 //           <h2 style={{ marginTop: "60px" }}>Key Features</h2>
 //           <p>Discover the perfect getaway where majestic mountains, pristine beaches, iconic landmarks, and seamless transport come together for an unforgettable adventure.</p>
 
-
 //           <Row className="additional-services">
 //             <Col md={3}>
 //               <div className="service-icon">
@@ -231,18 +230,11 @@
 
 // export default Home;
 
-
-
-
-
-
-
 // <img src='https://img.freepik.com/free-photo/neuschwanstein-castle-germany_395237-205.jpg?t=st=1734056745~exp=1734060345~hmac=204e901494c6c4cd8a852dd442b07d739a08eb6d5c41cc63ac8e91d11eeadeb6&w=996' className='w-100 h-100' />
-
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import germany from "../../assets/germany.jpeg";
+import germany2 from "../../assets/germany2.jpeg";
 
 const Home = () => {
   let navigate = useNavigate();
@@ -254,7 +246,7 @@ const Home = () => {
   return (
     <div className="home-container">
       {/* Background Image */}
-      <img src={germany} alt="Germany" className="home-image" />
+      <img src={germany2} alt="Germany" className="home-image" />
 
       {/* Centered Button */}
       <button className="explore-button1" onClick={clickHandler}>
